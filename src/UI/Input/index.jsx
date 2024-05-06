@@ -1,6 +1,5 @@
 import { css, styled } from "styled-components";
 import { SearchIcon } from "../../assets/svgs";
-import { useState } from "react";
 
 const SearchStyle = styled.div`
   display: flex;
@@ -22,11 +21,10 @@ const SearchStyle = styled.div`
     outline: none;
   }
 
-  ${({ animateinput }) =>
+  /* ${({ animateinput }) =>
     animateinput &&
     css`
       input {
-        border-bottom: 1px solid aliceblue;
         animation: animate-input 0.9s linear;
       }
     `}
@@ -47,7 +45,7 @@ const SearchStyle = styled.div`
     100% {
       width: 400px;
     }
-  }
+  } */
 `;
 
 const SearchIconStyle = styled(SearchIcon)`
@@ -56,20 +54,22 @@ const SearchIconStyle = styled(SearchIcon)`
 `;
 
 function Input() {
-  let [animate, setAnimate] = useState(false);
+  // let [animate, setAnimate] = useState("false");
 
-  const handleAnimate = () => {
-    setAnimate(true);
+  // const handleAnimate = () => {
+  //   setAnimate("true");
 
-    setTimeout(() => {
-      setAnimate((prev) => !prev);
-    }, 1000);
-  };
+  //   setTimeout(() => {
+  //     setAnimate("false");
+  //   }, 1000);
+  // };
 
   return (
     <form action="post">
-      <SearchStyle animateinput={animate}>
-        <label htmlFor="text-search" onClick={handleAnimate}>
+      <SearchStyle>
+        {/* <SearchStyle animateinput={animate}> */}
+        {/* <label htmlFor="text-search" onClick={handleAnimate}> */}
+        <label htmlFor="text-search">
           <SearchIconStyle />
         </label>
         <input type="text" name="text" id="text-search" autoComplete="off" />

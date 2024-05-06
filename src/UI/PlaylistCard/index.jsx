@@ -8,6 +8,10 @@ const PlaylistCardStyle = styled.aside`
     color: #fff;
     font-size: 2.1rem;
     grid-column: 1 / last;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.6rem;
+    }
   }
 `;
 

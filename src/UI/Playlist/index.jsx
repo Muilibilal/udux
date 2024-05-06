@@ -14,6 +14,10 @@ const PlaylistStyle = styled.section`
   justify-content: center;
   flex-shrink: 0;
 
+  @media screen and (max-width: 800px) {
+    width: 180px;
+  }
+
   &::before {
     content: "";
     position: absolute;

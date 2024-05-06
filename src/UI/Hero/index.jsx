@@ -15,10 +15,18 @@ const Container = styled.div`
   height: 300px;
   margin: 20px auto;
 
+  @media screen and (max-width: 800px) {
+    height: 200px;
+  }
+
   img {
     position: absolute;
     top: 1rem;
     left: 1.5rem;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 `;
 
@@ -26,6 +34,10 @@ const StyledOmahLayText = styled(OmahLayText)`
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 function Hero() {
