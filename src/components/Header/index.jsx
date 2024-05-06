@@ -14,6 +14,10 @@ const Container = styled.header`
 const Card = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Header = () => {

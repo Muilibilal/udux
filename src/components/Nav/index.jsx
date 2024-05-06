@@ -11,34 +11,43 @@ const svgString = encodeURIComponent(
 const Container = styled.nav`
   background-image: url("data:image/svg+xml,${svgString}");
   background-color: #000;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  padding-top: 20px;
+  @media screen and (min-width: 800px) {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-top: 20px;
 
-  &::-webkit-scrollbar {
-    width: 3px;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: orange;
+      outline: none;
+    }
+
+    &::-moz-scrollbar {
+      width: 3px;
+    }
+
+    &::-moz-scrollbar-track {
+      box-shadow: inset 0 0 6px transparent;
+    }
+
+    &::-moz-scrollbar-thumb {
+      background-color: orange;
+      outline: none;
+    }
   }
 
-  &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: orange;
-    outline: none;
-  }
-
-  &::-moz-scrollbar {
-    width: 3px;
-  }
-
-  &::-moz-scrollbar-track {
-    box-shadow: inset 0 0 6px transparent;
-  }
-
-  &::-moz-scrollbar-thumb {
-    background-color: orange;
-    outline: none;
+  @media screen and (max-width: 800px) {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 `;
 

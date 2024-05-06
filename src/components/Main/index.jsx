@@ -8,6 +8,10 @@ const MainStyle = styled.main`
   background-color: #000;
   width: calc(100vw - 16rem);
   max-width: 100%;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 // const Wrapper = styled.div`

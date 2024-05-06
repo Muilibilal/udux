@@ -14,6 +14,10 @@ const UserStyle = styled.div`
     width: 40;
     aspect-ratio: 1;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const User = () => {
